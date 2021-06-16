@@ -44,8 +44,8 @@ app.delete("/countries/:id", async (req, res, next) => {
 
 app.post("/", async (req, res, next) => {
   try {
-    const flip = await User.create({ name: req.body.name });
-    res.status(201).send(flip);
+    const add = await User.create({ name: req.body.name });
+    res.status(201).send(add);
   } catch (err) {
     res.sendStatus(409);
   }
